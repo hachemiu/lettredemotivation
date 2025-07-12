@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="description" content="A simple HTML template" />
+<meta name="keywords" content="HTML, template, example" />
+<meta name="author" content="Hachemi" />
+<title>Lettre de Motivation</title>
+<!-- Inclure la feuille de style -->
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <h1>Lettre de Motivation</h1>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a class="slink" href="#section1">Introduction</a></li>
+        <li><a class="slink" href="#section2">Objet</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="section1">
+        <h2>Introduction</h2>
+        <ul class="Introduction">
+            <li>Nom & Prenom : Douidene Hachemi</li>
+            <li>Address: Blida, Algérie</li>
+            <li>Telephone: 0698553908</li>
+            <li>Email : Hachemi@gmail.com</li>
+        </ul>
+    </section>
+
+    <section id="section2">
+        <h2>Objet : Candidature pour le poste de [Spécialiste informatique/Développeur web]</h2>
+        <h5>Madame, Monsieur</h5>
+        <p class="normal">
+            Actuellement employé au sein de l'entreprise <cite>EURL Kazi-Tour Racim Ligne</cite>, je souhaite vous faire part de ma forte motivation pour le poste de <strong>Développeur Web Frontend</strong> au sein de votre société.
+            <br /><br />
+            Titulaire d'un diplôme en génie électrique, j'ai enrichi mes compétences en programmation en maîtrisant plusieurs langages informatiques tels que JavaScript, HTML, CSS et PHP. Lors de mes expériences précédentes chez EURL Kazi-Tour, j'ai pu développer des qualités essentielles telles que l'autonomie, la rigueur et l'esprit d'équipe, qui me semblent indispensables pour réussir dans ce poste.
+            <br /><br />
+            Je suis particulièrement attiré par la possibilité d'approfondir mes compétences dans le domaine du développement web. Convaincu que mes compétences organisationnelles et mon expérience du terrain me permettront de contribuer efficacement à vos projets, je suis motivé, sérieux et dynamique, prêt à m'investir pleinement pour relever les défis que ce poste implique.
+            <br /><br />
+            Je serais ravi de pouvoir vous rencontrer lors d'un entretien afin de vous exposer plus en détail ma motivation et mes compétences.
+            <br /><br />
+            Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+            <br /><br />
+            <h5><cite>cordialement</cite></h5>
+        </p>
+    </section>
+</main>
+
+<!-- Sidebar container -->
+<div class="sidebar-container">
+    <aside class="sidebar" id="sidebar">
+        <h2>Raccourcis</h2>
+        <p class="head">Vous Pouvez choisir ou allez</p>
+        <ul class="sidebar-links-01">
+            <li><a href="#section1">Vers "Introduction"</a></li>
+            <li><a href="#section2">Vers "Objet"</a></li>
+        </ul>
+        <h3>Liens Externes:</h3>
+        <ul class="sidebar-links-02">
+            <li><a href="https://projetct-01-97j3.vercel.app/" target="_blank">www.refreshment.com</a></li>
+            <li><a href="https://standard-six.vercel.app/" target="_blank">www.doc-Model.xyz</a></li>
+        </ul>
+    </aside>
+
+    <!-- Zone hover pour déclencher la sidebar -->
+    <div class="hover-area" id="hoverArea">Pour Plus d'informations</div>
+</div>
+
+<footer>
+    <p class="footer">© 2025 Hachemi Douidene. All rights reserved.</p>
+</footer>
+
+<!-- Script JS -->
+<script>
+  // Sélectionner les éléments
+  const hoverArea = document.getElementById('hoverArea');
+  const sidebar = document.getElementById('sidebar');
+
+  // Fonction pour afficher la sidebar
+  function showSidebar() {
+    sidebar.classList.add('visible');
+  }
+
+  // Fonction pour cacher la sidebar
+  function hideSidebar() {
+    sidebar.classList.remove('visible');
+  }
+
+  // Événement au clic sur la zone "Pour Plus d'informations"
+  hoverArea.addEventListener('click', () => {
+    // Toggle la visibilité
+    sidebar.classList.toggle('visible');
+  });
+
+  // Optionnel : fermer la sidebar quand on clique en dehors
+  document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !hoverArea.contains(event.target)) {
+      sidebar.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
